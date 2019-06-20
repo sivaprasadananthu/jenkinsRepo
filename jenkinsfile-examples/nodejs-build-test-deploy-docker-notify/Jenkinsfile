@@ -24,7 +24,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
 
-node('master') {
+node('node') {
 
 
     currentBuild.result = "SUCCESS"
@@ -42,7 +42,7 @@ node('master') {
 
          print "Environment will be : ${env.NODE_ENV}"
 
-         sh 'master -v'
+         sh 'node -v'
          sh 'npm prune'
          sh 'npm install'
          sh 'npm test'
